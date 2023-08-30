@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>JSX and Props</title>
+</head>
+
+<body>
+  <h1>JSX and Props</h1>
+  <div id="root"></div>
+  <script src="https://unpkg.com/react/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.js"></script>
+  <!-- <script type="text/babel">
+
+
+const Bouncer = (props) => {
+  let reply;
+  if (props.age < 18) {
+    reply = "Sorry kid, you can't come in"
+  } else if (props.age < 21) {
+    reply = "You can come in, but no drinking"
+  } else {
+    reply = <span>
+      Come in, you CAN drink!
+      <img src="https://media.giphy.com/media/eXg8Ij7JgnyDu/giphy.gif" />
+    </span>
+  }
+  return (
+    <div>
+      <p>
+        <b>Bouncer:</b> How old are you?
+      </p>
+      <p>
+        <b>You:</b> I am  {props.age} years old
+      </p>
+      <p>
+        <b>Bouncer:</b> {reply}
+      </p>
+    </div>
+  )
+}
+
+const Animal = (props) => {
+	console.log(props);
+	return (
+		<ul>
+			<li>Emoji: {props.emoji}</li>
+			<li>Name: {props.name}</li>
+			<li>Species: {props.species}</li>
+      <li>Age: {props.age}</li>
+			<li>IsCute: {props.isCute ? '✅' : '❌'}</li>
+		</ul>
+	);
+};
+
+const RandomChoice = (props) => {
+  const idx = Math.floor(Math.random() * props.choices.length);
+  const choice = props.choices[idx];
+  return (
+    <div>
+      <h4>Random Choice is: {choice}</h4>
+    </div>
+  )
+}
+
+const TodoList = (props) => {
+
+return (
+  <div>
+    <h4>Todo List</h4>
+    <ul>{props.todos.map(t =>
+      (
+        <li>
+          <input type="checkbox" />
+          <b>{t}</b>
+        </li>
+      )
+    )}</ul>
+  </div>
+)
+}
+
+const RandomNumRange = ({ min = 1, max = 10 }) => {
+  const rand = Math.floor(Math.random() * (max - min)) + min;
+  return <h1>Rand Is: {rand}</h1>
+}
+
+const Alert = ({ children }) => {
+  return (
+    <div>
+      🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+      <p>{children}</p>
+      🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+    </div>
+  )
+}
+
+const App = () => (
+  <div>
+    <Alert>
+      <h1>HELLO!!!!</h1>
+      <RandomNumRange min={20} max={30} />
+      <RandomNumRange />
+    </Alert>
+   
+
+    <Animal
+      name="Stevie Chicks"
+      species="Silkie Chicken"
+      emoji="🐔"
+      isCute
+    />
+    <Animal name="Patrick" species="Red Fox" emoji="🦊" age={4} />
+    <RandomChoice choices={['red', 'green', 'yellow']} />
+    <Bouncer age={19} />
+    <Bouncer age={11} />
+    <Bouncer age={39} />
+    <TodoList todos={['walk chickens', 'feed chickens', 'eat chickens']} />
+
+  </div>
+)
+
+
+
+ReactDOM.render(<App />, document.getElementById("root"))
+
+
+
+  </script> -->
+
+  <script src="Shiba.js" type="text/jsx"></script>
+  <script src="SharPei.js" type="text/jsx"></script>
+  <script src="RandomNum.js" type="text/jsx"></script>
+  <script src="Animal.js" type="text/jsx"></script>
+  <script src="RandomChoice.js" type="text/jsx"></script>
+  <script src="Bouncer.js" type="text/jsx"></script>
+  <script src="TodoList.js" type="text/jsx"></script>
+  <script src="RandomNumRange.js" type="text/jsx"></script>
+  <script src="Alert.js" type="text/jsx"></script>
+
+  <script src="App.js" type="text/jsx"></script>
+</body>
+
+</html>
